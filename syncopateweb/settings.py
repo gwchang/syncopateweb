@@ -52,10 +52,14 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'syncopateweb.urls'
 
+PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            '%s/templates' % PROJECT_PATH
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
