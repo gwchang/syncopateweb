@@ -12,7 +12,7 @@ def showcluster(request, url):
         if len(tokens) >= 2:
             serieskeys.append(tokens[1])
     wspath = '&'.join([ 'series=%s' % k for k in keys ])
-    wshost = 'api.blub.io:32790'
+    wshost = 'api.blub.io:32795'
     wsurl = "ws://%s/ws?%s" % (wshost, wspath);
     print(wsurl)
     context = { 
